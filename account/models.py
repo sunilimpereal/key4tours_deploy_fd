@@ -5,7 +5,7 @@ from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
 
 
 class UserManager(BaseUserManager):
-    def create_user(self, email, name, password=None,password2 = None):
+    def create_user(self, email, firstname, lastname, mobile, password=None, password2=None):
         """
         Creates and saves a User with the given email, name and password.
         """
@@ -14,14 +14,16 @@ class UserManager(BaseUserManager):
 
         user = self.model(
             email=self.normalize_email(email),
-            name=name,
+            firstname=firstname,
+            lastname=lastname,
+            mobile=mobile,
         )
 
         user.set_password(password)
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, email, name, password=None):
+    def create_superuser(self, email, firstname,lastname,mobile, password=None):
         """
         Creates and saves a superuser with the given email, name
         and password.
@@ -29,12 +31,13 @@ class UserManager(BaseUserManager):
         user = self.create_user(
             email,
             password=password,
-            name=name,
+             firstname=firstname,
+            lastname=lastname,
+            mobile=mobile,
         )
         user.is_admin = True
         user.save(using=self._db)
         return user
-
 
 
 class User(AbstractBaseUser):
@@ -43,18 +46,18 @@ class User(AbstractBaseUser):
         max_length=255,
         unique=True,
     )
-    name = models.CharField(max_length=200)
+    firstname = models.CharField(max_length=200)
+    lastname = models.CharField(max_length=200)
+    mobile = models.CharField(max_length=200)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
-    
-    
 
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['name']
+    REQUIRED_FIELDS = ['firstname','lastname','mobile']
 
     def __str__(self):
         return self.email

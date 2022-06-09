@@ -1,7 +1,4 @@
-from base64 import urlsafe_b64decode, urlsafe_b64encode
-from pyexpat import model
-from colorama import Style
-from coreapi import Field
+
 from django.forms import ValidationError
 from numpy import rate
 from rest_framework import serializers
@@ -19,7 +16,7 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
     password2 = serializers.CharField(style ={'input_type':'password'},write_only = True)
     class Meta:
         model = User
-        fields = ['email','name','password','password2']
+        fields = ['email','firstname','lastname','mobile','password','password2',]
         extra_kwargs = {
             'password' : {'write_only':True}
         }
@@ -41,7 +38,7 @@ class UserLoginSerializer(serializers.ModelSerializer):
 class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id','email','name']
+        fields = ['id','email','firstname','lastname','mobile']
 
 class UserChangePasswordSerializer(serializers.ModelSerializer):
     password = serializers.CharField(max_length = 255,style = {'input_type':'password'},write_only = True)
