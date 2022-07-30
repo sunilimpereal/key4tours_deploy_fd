@@ -12,6 +12,7 @@ RUN apk add make automake gcc g++ subversion python3-dev
 RUN mkdir /app
 WORKDIR /app
 COPY requirements.txt /app/
+RUN python -m pip install --upgrade pip setuptools wheel
 RUN pip install -r requirements.txt
 COPY . /app/
 
