@@ -7,7 +7,8 @@ ENV PYTHONUNBUFFERED 1
 RUN apk update \
     && apk add postgresql-dev gcc python3-dev musl-dev
 
-    
+RUN apk update
+RUN apk add make automake gcc g++ subversion python3-dev  
 RUN mkdir /app
 WORKDIR /app
 COPY requirements.txt /app/
