@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from package.models import Amenity, Day, HolidayPackage, Itinerary, Review, Saved, Tag
+from package.models import Amenity, Day, Duration, HolidayPackage, Itinerary, PriceCategory, Review, Saved, Tag
 
 # Register your models here.
 admin.site.register(HolidayPackage)
@@ -10,23 +10,6 @@ admin.site.register(Tag)
 admin.site.register(Review)
 admin.site.register(Amenity)
 admin.site.register(Saved)
+admin.site.register(PriceCategory)
+admin.site.register(Duration)
 
-
-# ⣿⣿⣿⣿⣿⣿⠏⠌⣾⣿⣿
-# ⣿⣿⣿⣿⣿⠀⠀⠸⠿⣿⣿⣿
-# ⣿⣿⣿⣿⠃⠀⣠⣾⣿⣿⣿
-# ⣿⣿⡿⠃⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿
-# ⣿⣿⠃⠀⠀⣾⣿⣿⣿⣿⣿⣦⠀⠈⠻⣿⣿⣿
-# ⣿⣿⠀⠀⠀⣿⣿⣿⠟⠉⠉⠉⢃⣤⠀⠈⢿⣿⣿⣿
-# ⣿⣿⠀⠀⠀⢸⣿⡟⠀⠀⠀⠀⢹⣿⣧⠀⠀⠙⣿⣿
-# ⣿⣿⡆⠀⠀⠈⠻⡅⠀⠀⠀⠀⣸⣿⠿⠇⠀⠀⢸⣿
-# ⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠔⠛⠁⠀⠀⠀⣠⣿⣿
-# ⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿
-# ⣿⣿⣿⠃We Go Jim⠀⠀⣠⣾⣿⣿
-# ⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⣠⣿
-# ⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⢰⣿
-# ⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿
-# ⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿
-# ⣿⣿⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿
-# ⣿⣿⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿
-# ⣿⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿

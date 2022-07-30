@@ -1,0 +1,65 @@
+{
+
+    "name": "Armenia",
+    "country": "Yerevan",
+    "location": "Armenia",
+    "description": "Armenia",
+    "durations": [{
+
+        "dec_name": "Armenia",
+        "itinerary": {
+
+            "name": "Armenia",
+            "description": "Armenia",
+            "days": []
+        },
+        "duration": "3 Nights / 4 Days",
+        "description": "3 Nights / 4 Days",
+        "PriceCategory": [{
+
+                "dec_name": "Armenia  3 Nights / 4 Days 4* Holiday in",
+                "title": "4* Holiday in or Smilar",
+                "stars": 4,
+                "description": "4* Holiday in or Smilar",
+                "one_adult": "350.00",
+                "two_adult": "290.00",
+                "three_adult": "275.00",
+                "child_add_price": "180.00"
+            },
+            {
+
+                "dec_name": "Armenia 3 Nights / 4 Days 5* Ani grand",
+                "title": "c",
+                "stars": 5,
+                "description": "5* Ani grand or Similar",
+                "one_adult": "390.00",
+                "two_adult": "345.00",
+                "three_adult": "320.00",
+                "child_add_price": "180.00"
+            }
+        ]
+    }],
+    "tags": [{
+
+        "name": "New packages",
+        "description": "New packages"
+    }],
+    "amenities": [{
+
+        "name": "aminity",
+        "description": "aminity",
+        "icon": "/media/icons/b3.webp"
+    }],
+    "inclusions": "Accomodation in hotel 3 nights\t\t\t\r\nBreakfasts\t\t\t\r\nTransfer airport- hotel – airport\t\t\t\r\nSIC tours Garni, Geghard, “Lavash” making process and to Sevan, Dilijan\t\t\t\r\nEntry tickets",
+    "exclusions": "Air Fare\t\r\nTravel Insurance\t\r\nVisa\t\r\nExtra short walking city tour on day of arrival – 50 USD.\t\r\nCovid Test USD 55",
+    "about": "about",
+    "pdf": null,
+    "is_active": true,
+    "reviews": [],
+    "image1": "/media/Holiday%20Packages/b7.jpg",
+    "image2": null,
+    "image3": null,
+    "image4": null,
+    "image5": null,
+    "image6": null
+}

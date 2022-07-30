@@ -1,11 +1,12 @@
 from django.contrib import admin
 from django.urls import path, include
 from account.serializers import SendPasswordResetEmailSerializer
-from package.views import AddSavedHolidayPackage, HolidayPackageReviewView, HolidayPackagesView, HomeTagHolidayPackagesView, HomeTagsView, RemoveSavedHolidayPackage, SavedHolidayPackage, SearchRecommendationsView, SearchResultView
+from package.views import AddSavedHolidayPackage, HolidayPackageReviewView, HolidayPackagesView, HomeTagHolidayPackagesView, HomeTagsView, PostHolidayPackagesView, RemoveSavedHolidayPackage, SavedHolidayPackage, SearchRecommendationsView, SearchResultView
 urlpatterns = [
     path('tags/', HomeTagsView.as_view(),name='tags'),
     path('tagHolidayPackages/<id>/', HomeTagHolidayPackagesView.as_view(),name='tagsHolidayPackage'),
     path('holidayPackages/<id>/', HolidayPackagesView.as_view(),name='holidayPackage'),
+    path('postHolidayPackage', PostHolidayPackagesView.as_view(),name='postHolidayPackage'),
     path('holidayPackagesReview/<id>/', HolidayPackageReviewView.as_view(),name='holidayPackageReview'),
     path('holidayPackagesReview/', HolidayPackageReviewView.as_view(),name='holidayPackageReview'),
     #saved

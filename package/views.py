@@ -43,7 +43,24 @@ class HolidayPackagesView(APIView):
         queryset = HolidayPackage.objects.get(id=id)
         serializer = HolidayPackageSerializer(queryset)
         return Response(serializer.data, status=status.HTTP_200_OK)
+    
+    def post(self, request,format=None):
+        serializer = HolidayPackageSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        else:
+            return Response({"error": "failed to save holiday"}, status=status.HTTP_400_BAD_REQUEST)
 
+
+class PostHolidayPackagesView(APIView):
+    def post(self, request,format=None):
+        serializer = HolidayPackageSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        else:
+            return Response({"error": "failed to save holiday"  }, status=status.HTTP_400_BAD_REQUEST)
 # to add and get review of a holiday package
 
 
