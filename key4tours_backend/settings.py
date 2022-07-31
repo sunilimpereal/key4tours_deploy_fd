@@ -200,7 +200,7 @@ SIMPLE_JWT = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    # "https://example.com",
+    "https://key4tours.com",
     # "https://sub.example.com",
     "http://localhost:8080",
     "http://127.0.0.1:9000",
