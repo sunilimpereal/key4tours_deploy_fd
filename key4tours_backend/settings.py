@@ -50,7 +50,7 @@ CORS_ALLOW_HEADERS = [
 ALLOWED_HOSTS = ['*']
 
 CORS_ALLOWED_ORIGINS = [
-    'http://192.168.43.194:8000',
+    'https://key4tours.com',
 ]
 # Application definition
 
