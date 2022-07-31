@@ -45,10 +45,7 @@ CORS_ALLOW_HEADERS = [
 ]
 ALLOWED_HOSTS = ['*']
 
-CORS_ALLOWED_ORIGINS = [
-    'https://key4tours.com',
-]
-CORS_ALLOW_ALL_ORIGINS = True
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -196,9 +193,14 @@ SIMPLE_JWT = {
 
 }
 
+
+CORS_ALLOW_ALL_ORIGINS = True # If this is used then `CORS_ALLOWED_ORIGINS` will not have any effect
+CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
-    "https://key4tours.com",
-    # "https://sub.example.com",
+    'https://key4tours.com',
+] # If this is used, then not need to use `CORS_ALLOW_ALL_ORIGINS = True`
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    'https://key4tours.com',
     "http://localhost:8080",
     "http://127.0.0.1:9000",
 ]
